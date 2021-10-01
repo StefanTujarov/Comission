@@ -17,17 +17,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eSs-OI-7ww">
-                                <rect key="frame" x="20" y="44" width="374" height="166"/>
+                                <rect key="frame" x="20" y="44" width="374" height="209"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOh-Fc-IFY">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="74"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Calculate">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="50"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="WhenButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gzD-oL-s21"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="C57-nP-IbL">
-                                        <rect key="frame" x="0.0" y="51" width="374" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="94" width="374" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jj-l7-r95">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base Pay =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jj-l7-r95">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -42,9 +47,9 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ag7-2C-477">
-                                        <rect key="frame" x="0.0" y="91.5" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="134.5" width="374" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dE-Pt-8An">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commision Pay =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dE-Pt-8An">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -58,9 +63,9 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="voE-Jd-1Tw">
-                                        <rect key="frame" x="0.0" y="145.5" width="374" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="188.5" width="374" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kko-go-tTl">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Pay =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kko-go-tTl">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -85,6 +90,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSs-OI-7ww" secondAttribute="trailing" constant="20" id="QM3-Wn-urj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BasePayLabel" destination="0HB-TC-Ea1" id="HeK-nx-6Wk"/>
+                        <outlet property="CommisionTextField" destination="Lr0-7I-CIc" id="eui-se-I5b"/>
+                        <outlet property="TotalPayLabel" destination="GOp-1h-tPb" id="Lsa-5x-mrU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
